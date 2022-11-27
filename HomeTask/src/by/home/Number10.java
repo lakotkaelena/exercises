@@ -19,15 +19,8 @@ public class Number10 {
 		System.out.println("Ширина f участка: ");
 		int f = sc.nextInt();
 		sc.close();
-		Numb10 num=new Numb10();
+		Numb10 num = new Numb10();
 		num.numb1();
-
-	//	if ((e * f) > ((a * b) + (с * d))) {
-		//	System.out.println("Эти два дома поместятся на данном участке");
-	//	} else {
-		//	System.out.println("Эти два дома не поместятся на данном участке");
-
-		}
 	}
-
+}
 
