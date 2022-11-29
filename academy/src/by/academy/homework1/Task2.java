@@ -9,21 +9,22 @@ public class Task2 {
 		System.out.println("Введите тип данных: ");
 		String type = sc.nextLine();
 		System.out.println("Введите число: ");
-		double a = sc.nextInt();
+		String a = sc.nextLine();
 		sc.close();
 
 		switch (type) {
 		case "int":
-			System.out.println( a % 2);
+			System.out.println(Integer.parseInt(a) % 2);
 			break;
 		case "double":
-			System.out.println(a * 0.70);
+			System.out.println(Double.parseDouble(a) * 0.70);
 			break;
 		case "float":
-			System.out.println( a * a);
+			float f = Float.parseFloat(a);
+			System.out.println(f * f);
 			break;
 		case "char":
-			System.out.println((char) 0);  // ????
+			System.out.println(a.charAt(0));
 			break;
 		case "String":
 			System.out.println("Hello " + a);
@@ -34,4 +35,3 @@ public class Task2 {
 
 	}
 }
-

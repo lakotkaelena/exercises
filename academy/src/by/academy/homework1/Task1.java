@@ -7,29 +7,33 @@ public class Task1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Сумма покупки: ");
-		double a = sc.nextInt();
+		double sum = sc.nextDouble();
 		System.out.println("Возраст покупателя: ");
-		int b = sc.nextInt();
+		int age = sc.nextInt();
 		sc.close();
 
-		if (a >= 200 && a < 300) {
-			if (b > 18) {
-				System.out.println("Ваша скидка 16%. Сумма покупки с учетом скидки: " + (a - (a * 0.16)) + " рублей");
-			} else {
-				System.out.println("Ваша скидка 9%. Сумма покупки с учетом скидки: " + (a - (a * 0.09)) + " рублей");
-			}
-		}
-		if (a < 100) {
-			System.out.println("Финальная цена со скидкой 5% составит: " + (a - (a * 0.05)) + " рублей");
-		} else if (a >= 100 && a < 200) {
-			System.out.println("Финальная цена со скидкой 7% составит: " + (a - (a * 0.07)) + " рублей");
+		int sale = 0;
 
-		} else if (a >= 300 && a < 400) {
-			System.out.println("Финальная цена со скидкой 15% составит: " + (a - (a * 0.15)) + " рублей");
-		} else if (a >= 400) {
-			System.out.println("Финальная цена со скидкой 20% составит: " + (a - (a * 0.20)) + " рублей");
+		if (sum < 100) {
+			sale = 5;
+		} else if (sum < 200) {
+			sale = 7;
+		} else if (sum < 300) {
+			sale = 12;
+			if (age > 18) {
+				sale += 4;
+			} else {
+				sale -= 3;
+			}
+		} else if (sum < 400) {
+			sale = 15;
+		} else {
+			sale = 20;
 		}
+
+		double finalSum = sum - (sum * sale / 100);
+
+		System.out.println("Финальная цена со скидкой " + sale + "% составит: " + finalSum + " рублей");
 
 	}
 }
-
