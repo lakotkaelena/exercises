@@ -150,17 +150,7 @@ public class Array1 {
 		/*
 		 * Ввести n строк с консоли, найти самую короткую и самую длинную строки.
 		 */
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Введите строку: ");
-		String s1 = sc.nextLine();
-		System.out.println("Введите количество строк: ");
-		int n = sc.nextInt();
-		sc.close();
-
-		int i = 0;
-		for (i = 1; i < s1.length(); i++) {
-			if (i >= 0) {
-				i++;
+		
 				
 			}
 		}
