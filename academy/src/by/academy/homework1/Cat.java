@@ -1,12 +1,11 @@
 package by.academy.homework1;
 
 public class Cat {
-	int age;                  
-	String nickname;
-    double money;
-    String initials;
-    boolean isHomeAnimal=true;
-    
+	int age = 2;
+	String nickname = "Tom";
+	double money = 675;
+	boolean isHomeAnimal = true;
+
 	public Cat() {
 
 	}
@@ -15,25 +14,32 @@ public class Cat {
 		this.nickname = nickname;
 
 	}
+
+	public void setMoney(double money) {
+		this.money = money;
+	}
+
 	public double getMoney(double money) {
 		return money;
 	}
-	public void setMoney(double money) {
-		 this.money=money;
+
+	public void setInitials(String nickname) {
+		this.nickname = nickname;
 	}
-	public String getInitials(String inintials) {
-		return initials;
+
+	public String getInitials(String nickname) {
+		return nickname;
 	}
-	public void setInitials(String inintials) {
-		this.initials=initials;
+
+	public void setIsHomeAnimal(boolean isHomeAnimal) {
+		this.isHomeAnimal = isHomeAnimal;
 	}
+
 	public boolean getIsHomeAnimal(boolean isHomeAnimal) {
 		return isHomeAnimal;
 	}
-	public void setIsHomeAnimal(boolean isHomeAnimal) {
-		this.isHomeAnimal=true;
-	}
-	public void grow() {
+
+	public void grow(int i) {
 		age++;
 	}
 
