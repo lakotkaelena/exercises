@@ -110,7 +110,7 @@ public class St1_1 {
 
 		 System.out.println(n);
 
-		for (int i = 0; i < search.length-1; i++) {
+		for (int i = 0; i < search.length-1; i++) {   //сортируем массив по убыванию, чтобы не сместились индексы вхождений
 			if (search[i] < search[i + 1]) {
 				int p1 = search[i + 1];
 				search[i + 1] = search[i];
@@ -118,9 +118,9 @@ public class St1_1 {
 			}
 		}
 		
-		System.out.println(Arrays.toString(search));
+		//System.out.println(Arrays.toString(search));
 		
-		for (int i = 0; i < search.length-1; i++) {
+		for (int i = 0; i < search.length-1; i++) {  //на каждом втором вхождении заменяем подстроку earchString на replaseString
 			if(i%2==0) {
 				str.replace(search[i], search[i]+searchString.length(), replaseString);
 			}
